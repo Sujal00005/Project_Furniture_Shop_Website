@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - LuxeFurniture</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">LuxeFurniture</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beds.html">Beds</a></li>
+                <li><a href="sofas.html">Sofas</a></li>
+                <li><a href="dining-tables.html">Dining Tables</a></li>
+                <li><a href="interior-decor.html">Interior Decor</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-container">
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span id="subtotal-amount">$0.00</span>
+                </div>
+                <div class="tax">
+                    <span>Tax:</span>
+                    <span id="tax-amount">$0.00</span>
+                </div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="total-amount">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="cta-button">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <div class="shipping-address">
+            <h2>Shipping Address</h2>
+            <form id="address-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="street-address">Street Address</label>
+                    <input type="text" id="street-address" name="street-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip-code">ZIP Code</label>
+                    <input type="text" id="zip-code" name="zip-code" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="beds.html">Beds</a></li>
+                    <li><a href="sofas.html">Sofas</a></li>
+                    <li><a href="dining-tables.html">Dining Tables</a></li>
+                    <li><a href="interior-decor.html">Interior Decor</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <p>123 Luxury Lane, Elegance City, EC 12345</p>
+                <div id="map" style="width: 100%; height: 200px;"></div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 LuxeFurniture. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
